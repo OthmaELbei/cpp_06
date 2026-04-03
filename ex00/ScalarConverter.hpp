@@ -7,6 +7,10 @@
 #include <cctype>
 #include <limits>
 #include <cmath>
+#include <cstdlib>
+#include <cmath>
+#include <climits> 
+#include <cfloat>
 class ScalarConverter
 {
     ScalarConverter();

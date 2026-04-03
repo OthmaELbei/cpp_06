@@ -1,33 +1,5 @@
-#include <iostream>
-#include <cstdint>
 
-struct Data
-{
-    int id;
-    std::string name;
-};
-
-class Serializer
-{
-private:
-    Serializer();
-    Serializer(const Serializer &op);
-    Serializer &operator=(const Serializer &op);
-    ~Serializer();
-
-public:
-    static uintptr_t serialize(Data *ptr);
-    static Data *deserialize(uintptr_t raw);
-};
-uintptr_t Serializer::serialize(Data *ptr)
-{
-    return reinterpret_cast<uintptr_t>(ptr);
-}
-Data *Serializer::deserialize(uintptr_t raw)
-{
-    return reinterpret_cast<Data *>(raw);
-}
-
+#include "Serializer.hpp"
 int main()
 {
     Data opj;
