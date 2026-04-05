@@ -1,16 +1,24 @@
 #ifndef SCALARCONVERTER_HPP
 #define SCALARCONVERTER_HPP
 
+
 #include <iostream>
 #include <iomanip>
 #include <string>
 #include <cctype>
-#include <limits>
-#include <cmath>
 #include <cstdlib>
-#include <cmath>
-#include <climits> 
+#include <climits>
 #include <cfloat>
+
+struct data {
+    char   c;
+    int    nb;
+    float  f;
+    double d;
+};
+
+enum TYPE { CHAR, INT, FLOAT, DOUBLE, INVALID };
+
 class ScalarConverter
 {
     ScalarConverter();
@@ -21,4 +29,5 @@ class ScalarConverter
 public:
     static void convert(const std::string &literal);
 };
+
 #endif
